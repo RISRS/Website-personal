@@ -1,0 +1,457 @@
+/* ============================= */
+/* HEADER BARU SESUAI SKETSA */
+/* ============================= */
+
+.custom-header {
+    text-align: center;
+    font-size: 45px;
+    padding: 30px 0;
+    font-weight: bold;
+    background: linear-gradient(180deg, #700000, #b00000);
+    color: #fff;
+    border-bottom: 3px solid #550000;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 12px #ff8e8e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+
+
+.custom-nav {
+    background: linear-gradient(90deg, #8b0000, #c00000);
+    padding: 16px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 3px solid #550000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
+
+.custom-nav a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 35px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.custom-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #ffd000;
+    transition: width 0.3s;
+}
+.custom-nav a:hover::after {
+    width: 100%;
+}
+
+
+
+.custom-nav a:hover {
+    color: #ffe16d;
+    text-shadow: 0 0 10px #ffe16d;
+}
+
+
+
+/* Hapus nav lama agar tidak double */
+nav {
+    display: none !important;
+}
+
+/* ============================= */
+/* CSS ASLI WEBSITE BOSS */
+/* ============================= */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f0f23, #1a1a2e);
+    color: #fff;
+    overflow-x: hidden;
+    transition: background 0.5s, color 0.5s;
+}
+
+body.light {
+    background: linear-gradient(135deg, #f0f0f0, #d0d0d0);
+    color: #333;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Superman_Is_Dead_at_Jakarta_International_Java_Jazz_Festival_2018.jpg/1200px-Superman_Is_Dead_at_Jakarta_International_Java_Jazz_Festival_2018.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    z-index: 1;
+    animation: zoomIn 2s;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 0 0 30px #ff6b6b;
+}
+
+.typing {
+    font-family: 'Metal Mania', cursive;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-right: 2px solid #ff6b6b;
+    animation: blink 1s infinite;
+    color: #ff0000;
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.band-photo {
+    position: relative;
+    padding: 70px 20px;
+    text-align: center;
+    background: url('SID.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    margin: 20px 0;
+}
+
+.band-photo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45); /* Gelap tipis */
+    z-index: 0;
+}
+
+.band-photo img {
+    position: relative;
+    z-index: 1;
+}
+
+
+.band-photo img {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+    transition: transform 0.3s;
+}
+
+.band-photo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Membesarkan foto Eka */
+img[src="ekarock.jpg"] {
+    width: 500px;   /* ubah angka sesuai selera */
+    height: auto;
+}
+
+
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 1s;
+}
+
+.bio, .members, .discography, .gallery {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 50px;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ff6b6b;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #ff6b6b;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5em; }
+    .hero { height: 70vh; }
+    .band-photo img {
+        width: 95%;
+        max-width: none;
+    }
+}
+
+/* Smooth Fade Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.member-photo {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.member-photo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255,255,255,0.9);
+}
+
+.photo-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#modal-image {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.8);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 44px;
+    cursor: pointer;
+    color: white;
+}
+
+#band-info {
+    padding: 40px 20px;
+    color: white;
+}
+
+.member-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.member-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffeb3b;
+}
+
+.member-text h3 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #ffeb3b;
+}
+
+.member-text p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+
+.sid-photo {
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 12px;
+    transition: 0.35s;
+    box-shadow: 0 0 10px rgba(255,0,0,0.4);
+}
+
+.sid-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 15px rgba(241, 238, 238, 0.9),
+        0 0 30px rgb(252, 252, 252),
+        0 0 50px rgb(255, 255, 255);
+}
+
+/* Animasi saat halaman muncul */
+.page-enter {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: pageFade 1s forwards;
+}
+
+@keyframes pageFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek neon kelap-kelip pada h1 */
+.neon-flicker {
+    animation: neonBlink 2s infinite alternate;
+}
+
+@keyframes neonBlink {
+    0% {
+        text-shadow:
+            0 0 5px #ff0000,
+            0 0 10px #ff0000,
+            0 0 20px #ff4444;
+        opacity: 0.9;
+    }
+    50% {
+        text-shadow:
+            0 0 15px #ff4444,
+            0 0 30px #ff0000,
+            0 0 45px #ff4444;
+        opacity: 1;
+    }
+    100% {
+        text-shadow:
+            0 0 4px #ff0000,
+            0 0 8px #ff0000,
+            0 0 15px #ff4444;
+        opacity: 0.85;
+    }
+}
+.gallery-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.gallery-item p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffd000;
+    text-shadow: 0 0 8px #ff0000;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.gallery-item img {
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+.album-info h3 {
+    margin-top: 0;
+    color: #ffd000;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    text-shadow: 0 0 10px red;
+}
+
+.album-info ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+}
+
+.album-info ul li {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .album-info ul {
+        padding-left: 0;
+        list-style: none;
+    }
+}
